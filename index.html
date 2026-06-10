@@ -370,6 +370,13 @@
       justify-content: center;
     }
 
+    .sport-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
     .sport-name {
       font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
@@ -745,6 +752,7 @@
       object-fit: contain;
       filter: grayscale(100%) opacity(70%);
       transition: all 0.3s ease;
+      border-radius: 12px;
     }
 
     .support-logo-img:hover {
@@ -824,7 +832,7 @@
           <div data-lang="en">
             <p>The Indo-Aachener Sportverein e.V. was founded to maximize the use of shared resources and strengthen
               solidarity among all Indonesian communities in Aachen, Germany.</p>
-            <p>Through sport, the club brings together Indonesians living and studying in Aachen, creating a home away
+            <p>Through sport, the club brings together Indonesians living and studying in Aachen — creating a home away
               from home built on teamwork, friendship, and shared culture.</p>
             <p>Activities include regular training sessions, tournaments, youth-oriented events, and participation in
               broader sporting competitions.</p>
@@ -832,7 +840,7 @@
           <div data-lang="de">
             <p>Der Indo-Aachener Sportverein e.V. wurde gegründet, um gemeinsame Ressourcen optimal zu nutzen und die
               Solidarität unter allen indonesischen Gemeinschaften in Aachen zu stärken.</p>
-            <p>Durch Sport vereint der Verein Indonesier, die in Aachen leben und studieren, und schafft ein zweites
+            <p>Durch Sport vereint der Verein Indonesier, die in Aachen leben und studieren — und schafft ein zweites
               Zuhause, das auf Teamgeist, Freundschaft und gemeinsamer Kultur beruht.</p>
             <p>Zu den Aktivitäten gehören regelmäßiges Training, Turniere, Jugendveranstaltungen und die Teilnahme an
               sportlichen Wettkämpfen.</p>
@@ -840,7 +848,7 @@
           <div data-lang="id">
             <p>Indo-Aachener Sportverein e.V. didirikan untuk memaksimalkan penggunaan sumber daya bersama dan
               mempererat solidaritas di antara seluruh komunitas Indonesia di Aachen, Jerman.</p>
-            <p>Melalui olahraga, klub ini menyatukan warga Indonesia yang tinggal dan belajar di Aachen. Menciptakan
+            <p>Melalui olahraga, klub ini menyatukan warga Indonesia yang tinggal dan belajar di Aachen — menciptakan
               rumah kedua yang dibangun atas dasar kerja sama tim, persahabatan, dan kebudayaan bersama.</p>
             <p>Kegiatan meliputi sesi latihan rutin, turnamen, acara pemuda, serta partisipasi dalam kompetisi olahraga
               yang lebih luas.</p>
@@ -916,104 +924,44 @@
       <div class="sports-grid">
         <div class="sport-card">
           <div class="sport-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Shuttlecock cork -->
-              <ellipse cx="20" cy="30" rx="4" ry="3" fill="white" opacity="0.9" />
-              <!-- Shuttlecock feathers - fan shape -->
-              <line x1="20" y1="27" x2="12" y2="10" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                opacity="0.85" />
-              <line x1="20" y1="27" x2="15" y2="8" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                opacity="0.9" />
-              <line x1="20" y1="27" x2="20" y2="7" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-              <line x1="20" y1="27" x2="25" y2="8" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                opacity="0.9" />
-              <line x1="20" y1="27" x2="28" y2="10" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                opacity="0.85" />
-              <!-- Feather tips arc -->
-              <path d="M12 10 Q16 6 20 7 Q24 6 28 10" stroke="white" stroke-width="1.2" fill="none" opacity="0.7"
-                stroke-linecap="round" />
-              <!-- Racket handle -->
-              <line x1="8" y1="38" x2="17" y2="29" stroke="white" stroke-width="2.5" stroke-linecap="round" />
-              <!-- Racket head -->
-              <ellipse cx="21" cy="24" rx="7" ry="8" stroke="white" stroke-width="1.8" fill="none"
-                transform="rotate(-30 21 24)" />
-              <!-- Strings -->
-              <line x1="16" y1="20" x2="22" y2="30" stroke="white" stroke-width="0.8" opacity="0.5" />
-              <line x1="19" y1="18" x2="25" y2="28" stroke="white" stroke-width="0.8" opacity="0.5" />
-              <line x1="15" y1="24" x2="27" y2="22" stroke="white" stroke-width="0.8" opacity="0.5" />
-              <line x1="14" y1="27" x2="26" y2="25" stroke="white" stroke-width="0.8" opacity="0.5" />
-            </svg>
+            <img src="badminton.png" alt="Badminton Logo">
           </div>
           <h3 class="sport-name">Badminton</h3>
           <p class="sport-desc">
-            <span data-lang="en">Badminton Division</span>
+            <span data-lang="en">Abteilung Badminton</span>
             <span data-lang="de">Badmintonabteilung</span>
             <span data-lang="id">Divisi Badminton</span>
           </p>
         </div>
         <div class="sport-card">
           <div class="sport-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="16" stroke="white" stroke-width="2" fill="none" />
-              <!-- Vertical seam -->
-              <path d="M20 4 Q20 20 20 36" stroke="white" stroke-width="1.5" fill="none" />
-              <!-- Horizontal seam -->
-              <path d="M4 20 Q20 20 36 20" stroke="white" stroke-width="1.5" fill="none" />
-              <!-- Left curve -->
-              <path d="M7 9 Q14 20 7 31" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" />
-              <!-- Right curve -->
-              <path d="M33 9 Q26 20 33 31" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" />
-            </svg>
+            <img src="basket-ball.png" alt="Basketball Logo">
           </div>
           <h3 class="sport-name">Basketball</h3>
           <p class="sport-desc">
-            <span data-lang="en">Basketball Division</span>
+            <span data-lang="en">Abteilung Basketball</span>
             <span data-lang="de">Basketballabteilung</span>
             <span data-lang="id">Divisi Basket</span>
           </p>
         </div>
         <div class="sport-card">
           <div class="sport-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="16" stroke="white" stroke-width="2" fill="none" />
-              <!-- Center pentagon -->
-              <polygon points="20,13 24.8,16.5 23,22 17,22 15.2,16.5" stroke="white" stroke-width="1.5" fill="none" />
-              <!-- Lines from pentagon to edge -->
-              <line x1="20" y1="13" x2="20" y2="4" stroke="white" stroke-width="1.2" stroke-linecap="round" />
-              <line x1="24.8" y1="16.5" x2="33" y2="13" stroke="white" stroke-width="1.2" stroke-linecap="round" />
-              <line x1="23" y1="22" x2="29" y2="30" stroke="white" stroke-width="1.2" stroke-linecap="round" />
-              <line x1="17" y1="22" x2="11" y2="30" stroke="white" stroke-width="1.2" stroke-linecap="round" />
-              <line x1="15.2" y1="16.5" x2="7" y2="13" stroke="white" stroke-width="1.2" stroke-linecap="round" />
-            </svg>
+            <img src="football.png" alt="Futsal Logo">
           </div>
           <h3 class="sport-name">Futsal</h3>
           <p class="sport-desc">
-            <span data-lang="en">Futsal Division</span>
+            <span data-lang="en">Abteilung Futsal</span>
             <span data-lang="de">Futsalabteilung</span>
             <span data-lang="id">Divisi Futsal</span>
           </p>
         </div>
         <div class="sport-card">
           <div class="sport-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="16" stroke="white" stroke-width="2" fill="none" />
-              <!-- Top-left panel curve -->
-              <path d="M20 4 Q8 8 6 20" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" />
-              <!-- Top-right panel curve -->
-              <path d="M20 4 Q30 6 34 16" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" />
-              <!-- Right panel -->
-              <path d="M34 16 Q36 28 26 34" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" />
-              <!-- Bottom curve -->
-              <path d="M26 34 Q20 38 14 34" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" />
-              <!-- Left bottom -->
-              <path d="M6 20 Q5 30 14 34" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" />
-              <!-- Center divider -->
-              <path d="M6 20 Q18 24 26 34" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" />
-            </svg>
+            <img src="volleyball.png" alt="Volleyball Logo">
           </div>
           <h3 class="sport-name">Volleyball</h3>
           <p class="sport-desc">
-            <span data-lang="en">Volleyball Division</span>
+            <span data-lang="en">Abteilung Volleyball</span>
             <span data-lang="de">Volleyballabteilung</span>
             <span data-lang="id">Divisi Voli</span>
           </p>
@@ -1323,6 +1271,8 @@
 
       <div class="support-grid">
         <img src="aki.png" alt="Arbeitskreis Indonesia" class="support-logo-img">
+        <img src="ia_badminton.jpg" alt="Aachener Badminton" class="support-logo-img">
+        <img src="ia_basket.jpg" alt="Aachener Basket" class="support-logo-img">
         <img src="iafc.jpg" alt="AFC" class="support-logo-img">
         <img src="kia.jpg" alt="Keluarga Islam Aachen" class="support-logo-img">
         <img src="kmki.jpg" alt="KMKI Aachen" class="support-logo-img">
@@ -1369,7 +1319,7 @@
       <a href="impressum.html" class="footer-link">
         <span data-lang="en">Imprint</span>
         <span data-lang="de">Impressum</span>
-        <span data-lang="id">Impresum</span>
+        <span data-lang="id">Impressum</span>
       </a>
     </p>
     <p>© 2026 Indo-Aachener Sportverein e.V. All rights reserved.</p>
