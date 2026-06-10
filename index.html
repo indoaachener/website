@@ -448,6 +448,43 @@
       border-bottom: none;
     }
 
+    /* ── MEMBERSHIP ACTIONS ── */
+    .membership-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.85rem 2rem;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      box-shadow: 0 4px 15px rgba(29, 52, 97, 0.15);
+      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .action-btn:hover {
+      background: var(--red);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(197, 69, 58, 0.25);
+    }
+
+    .action-btn:active {
+      transform: translateY(0);
+    }
+
     /* ── GOVERNANCE ── */
     .governance {
       background: #EEF2F8;
@@ -769,6 +806,88 @@
         height: 110px;
       }
     }
+
+    /* ── PDF MODAL ── */
+    .pdf-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 28, 53, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .pdf-modal.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .pdf-modal-container {
+      position: relative;
+      background: var(--white);
+      width: 90%;
+      height: 85%;
+      max-width: 1000px;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: scale(0.95);
+      transition: transform 0.3s ease;
+    }
+
+    .pdf-modal.active .pdf-modal-container {
+      transform: scale(1);
+    }
+
+    .pdf-modal-header {
+      padding: 1rem 1.5rem;
+      background: var(--dark);
+      color: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--red);
+    }
+
+    .pdf-modal-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+    }
+
+    .pdf-modal-close {
+      background: transparent;
+      border: none;
+      color: var(--pink);
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.25s;
+    }
+
+    .pdf-modal-close:hover {
+      color: var(--white);
+    }
+
+    .pdf-modal-body {
+      flex: 1;
+      position: relative;
+      background: #f1f3f6;
+    }
+
+    .pdf-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
   </style>
 </head>
 
@@ -1045,6 +1164,19 @@
             </li>
           </ul>
         </div>
+      </div>
+
+      <div class="membership-actions">
+        <a href="Satzung.pdf" target="_blank" class="action-btn" onclick="openPdf('Satzung.pdf', 'Articles of Association (Satzung)', 'Satzung', 'Anggaran Dasar (Satzung)'); return false;">
+          <span data-lang="en">Articles of Association (Satzung)</span>
+          <span data-lang="de">Satzung</span>
+          <span data-lang="id">Anggaran Dasar (Satzung)</span>
+        </a>
+        <a href="Beitragsordnung.pdf" target="_blank" class="action-btn" onclick="openPdf('Beitragsordnung.pdf', 'Fee Regulations (Beitragsordnung)', 'Beitragsordnung', 'Ketentuan Iuran (Beitragsordnung)'); return false;">
+          <span data-lang="en">Fee Regulations (Beitragsordnung)</span>
+          <span data-lang="de">Beitragsordnung</span>
+          <span data-lang="id">Ketentuan Iuran (Beitragsordnung)</span>
+        </a>
       </div>
     </div>
   </section>
@@ -1325,6 +1457,23 @@
     <p>© 2026 Indo-Aachener Sportverein e.V. All rights reserved.</p>
   </footer>
 
+  <!-- PDF MODAL -->
+  <div id="pdf-modal" class="pdf-modal" onclick="if(event.target === this) closePdf();">
+    <div class="pdf-modal-container">
+      <div class="pdf-modal-header">
+        <h3 class="pdf-modal-title">
+          <span id="pdf-title-en" data-lang="en">Document Viewer</span>
+          <span id="pdf-title-de" data-lang="de">Dokumentenanzeige</span>
+          <span id="pdf-title-id" data-lang="id">Penampil Dokumen</span>
+        </h3>
+        <button class="pdf-modal-close" onclick="closePdf()">&times;</button>
+      </div>
+      <div class="pdf-modal-body">
+        <iframe id="pdf-iframe" src="about:blank" class="pdf-iframe"></iframe>
+      </div>
+    </div>
+  </div>
+
   <script>
     function setLang(lang, btn) {
       document.body.setAttribute('data-active-lang', lang);
@@ -1340,6 +1489,27 @@
         setLang(savedLang, btn);
       }
     });
+
+    function openPdf(pdfUrl, docTitleEn, docTitleDe, docTitleId) {
+      const modal = document.getElementById('pdf-modal');
+      const iframe = document.getElementById('pdf-iframe');
+      
+      iframe.src = pdfUrl;
+      document.getElementById('pdf-title-en').textContent = docTitleEn;
+      document.getElementById('pdf-title-de').textContent = docTitleDe;
+      document.getElementById('pdf-title-id').textContent = docTitleId;
+      
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePdf() {
+      const modal = document.getElementById('pdf-modal');
+      const iframe = document.getElementById('pdf-iframe');
+      iframe.src = 'about:blank';
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
   </script>
 </body>
 
