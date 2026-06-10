@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,38 +29,6 @@
     font-size: 16px;
     line-height: 1.7;
     overflow-x: hidden;
-  }
-
-  /* ── LANG SWITCHER ── */
-  .lang-bar {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: var(--dark);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0.5rem 2rem;
-    gap: 0.25rem;
-  }
-  .lang-bar span { color: var(--muted); font-size: 0.75rem; margin-right: 0.5rem; letter-spacing: .08em; text-transform: uppercase; }
-  .lang-btn {
-    background: transparent;
-    border: 1px solid #2a3a55;
-    color: var(--muted);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.75rem;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: background 0.2s, color 0.2s, border-color 0.2s;
-  }
-  .lang-btn:hover, .lang-btn.active {
-    background: var(--red);
-    color: var(--white);
-    border-color: var(--red);
   }
 
   /* ── HEADER ── */
@@ -163,17 +131,6 @@
     border-top: 1px solid rgba(255, 255, 255, 0.15);
   }
 
-  /* ── LANGUAGE VISIBILITY ── */
-  [data-lang] { display: none; }
-  body[data-active-lang="en"] [data-lang="en"] { display: block; }
-  body[data-active-lang="de"] [data-lang="de"] { display: block; }
-  body[data-active-lang="id"] [data-lang="id"] { display: block; }
-  
-  span[data-lang] { display: none; }
-  body[data-active-lang="en"] span[data-lang="en"] { display: inline; }
-  body[data-active-lang="de"] span[data-lang="de"] { display: inline; }
-  body[data-active-lang="id"] span[data-lang="id"] { display: inline; }
-
   @media (max-width: 768px) {
     .legal-card {
       padding: 1.75rem;
@@ -181,28 +138,13 @@
   }
 </style>
 </head>
-<body data-active-lang="id">
-
-<!-- LANGUAGE BAR -->
-<div class="lang-bar">
-  <span>Language:</span>
-  <button class="lang-btn" onclick="setLang('id', this)">ID</button>
-  <button class="lang-btn active" onclick="setLang('de', this)">DE</button>
-  <button class="lang-btn" onclick="setLang('en', this)">EN</button>
-</div>
+<body>
 
 <!-- HEADER -->
 <header class="header">
-  <h1 class="header-title">
-    <span data-lang="en">Imprint</span>
-    <span data-lang="de">Impressum</span>
-    <span data-lang="id">Impresum</span>
-  </h1>
+  <h1 class="header-title">Impressum</h1>
   <a href="index.html" class="back-btn">
-    ← 
-    <span data-lang="en">Back to Home</span>
-    <span data-lang="de">Zurück zur Startseite</span>
-    <span data-lang="id">Kembali ke Beranda</span>
+    ← Zurück zur Startseite
   </a>
 </header>
 
@@ -210,108 +152,56 @@
 <section class="content-section">
   <div class="container">
     <div class="legal-card">
-      <h2 class="legal-title">
-        <span data-lang="en">Information according to § 5 TMG</span>
-        <span data-lang="de">Angaben gemäß § 5 TMG</span>
-        <span data-lang="id">Informasi berdasarkan § 5 TMG</span>
-      </h2>
+      <h2 class="legal-title">Angaben gemäß § 5 TMG</h2>
 
       <div class="legal-row">
-        <div class="legal-label">
-          <span data-lang="en">Organization Name</span>
-          <span data-lang="de">Name des Vereins</span>
-          <span data-lang="id">Nama Organisasi</span>
-        </div>
-        <div class="legal-value">
-          Indo-Aachener Sportverein e.V.
-        </div>
+        <div class="legal-label">Name des Vereins</div>
+        <div class="legal-value">Indo-Aachener Sportverein e.V.</div>
       </div>
 
       <div class="legal-row">
-        <div class="legal-label">
-          <span data-lang="en">Address</span>
-          <span data-lang="de">Adresse</span>
-          <span data-lang="id">Alamat</span>
-        </div>
-        <div class="legal-value">
-          An der Schanz 1, 52064 Aachen
-        </div>
+        <div class="legal-label">Adresse</div>
+        <div class="legal-value">An der Schanz 1, 52064 Aachen</div>
       </div>
 
       <div class="legal-row">
-        <div class="legal-label">
-          <span data-lang="en">Legal Form</span>
-          <span data-lang="de">Rechtsform</span>
-          <span data-lang="id">Bentuk Hukum</span>
-        </div>
-        <div class="legal-value">
-          <span data-lang="en">Registered Association (e.V.)</span>
-          <span data-lang="de">Eingetragener Verein (e.V.)</span>
-          <span data-lang="id">Asosiasi Terdaftar (e.V.)</span>
-        </div>
+        <div class="legal-label">Rechtsform</div>
+        <div class="legal-value">Eingetragener Verein (e.V.)</div>
       </div>
 
       <div class="legal-row">
-        <div class="legal-label">
-          <span data-lang="en">Registration Court</span>
-          <span data-lang="de">Registergericht</span>
-          <span data-lang="id">Pengadilan Pendaftaran</span>
-        </div>
+        <div class="legal-label">Registergericht</div>
+        <div class="legal-value">Amtsgericht Aachen (VR 12345)</div>
+      </div>
+    </div>
+
+    <div class="legal-card">
+      <h2 class="legal-title">Vertretungsberechtigte Personen</h2>
+
+      <div class="legal-row">
+        <div class="legal-label">Vertretungsberechtigter Vorstand</div>
         <div class="legal-value">
-          Amtsgericht Aachen (VR 12345)
+          <p><strong>Vorsitzender:</strong> Nathan Matthew Kurnia</p>
+          <p><strong>Stellv. Vorsitzender:</strong> Jonathan Alexander Tresna</p>
+          <p><strong>Schatzmeister:</strong> Dominic Denzell</p>
         </div>
       </div>
     </div>
 
     <div class="legal-card">
-      <h2 class="legal-title">
-        <span data-lang="en">Representation</span>
-        <span data-lang="de">Vertretungsberechtigte Personen</span>
-        <span data-lang="id">Representasi Hukum</span>
-      </h2>
-
-      <div class="legal-row">
-        <div class="legal-label">
-          <span data-lang="en">Authorized Board</span>
-          <span data-lang="de">Vertretungsberechtigter Vorstand</span>
-          <span data-lang="id">Dewan Pengurus Berwenang</span>
-        </div>
-        <div class="legal-value">
-          <p><strong><span data-lang="en">Chairperson:</span><span data-lang="de">Vorsitzender:</span><span data-lang="id">Ketua:</span></strong> Nathan Matthew Kurnia</p>
-          <p><strong><span data-lang="en">Deputy Chairperson:</span><span data-lang="de">Stellv. Vorsitzender:</span><span data-lang="id">Wakil Ketua:</span></strong> Jonathan Alexander Tresna</p>
-          <p><strong><span data-lang="en">Treasurer:</span><span data-lang="de">Schatzmeister:</span><span data-lang="id">Bendahara:</span></strong> Dominic Denzell</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="legal-card">
-      <h2 class="legal-title">
-        <span data-lang="en">Contact</span>
-        <span data-lang="de">Kontakt</span>
-        <span data-lang="id">Kontak</span>
-      </h2>
+      <h2 class="legal-title">Kontakt</h2>
 
       <div class="legal-row">
         <div class="legal-label">E-Mail</div>
-        <div class="legal-value">
-          indoaachener@gmail.com
-        </div>
+        <div class="legal-value">indoaachener@gmail.com</div>
       </div>
     </div>
 
     <div class="legal-card">
-      <h2 class="legal-title">
-        <span data-lang="en">Responsible for Content</span>
-        <span data-lang="de">Verantwortlich für den Inhalt</span>
-        <span data-lang="id">Penanggung Jawab Konten</span>
-      </h2>
+      <h2 class="legal-title">Verantwortlich für den Inhalt</h2>
 
       <div class="legal-row">
-        <div class="legal-label">
-          <span data-lang="en">According to § 55 Abs. 2 RStV</span>
-          <span data-lang="de">Gemäß § 55 Abs. 2 RStV</span>
-          <span data-lang="id">Berdasarkan § 55 Abs. 2 RStV</span>
-        </div>
+        <div class="legal-label">Gemäß § 55 Abs. 2 RStV</div>
         <div class="legal-value">
           <p>Nathan Matthew Kurnia</p>
           <p>An der Schanz 1, 52064 Aachen</p>
@@ -320,31 +210,13 @@
     </div>
 
     <div class="legal-card" style="border-left-color: var(--red);">
-      <h2 class="legal-title">
-        <span data-lang="en">Disclaimer</span>
-        <span data-lang="de">Haftungsausschluss</span>
-        <span data-lang="id">Pernyataan Penyangkalan</span>
-      </h2>
+      <h2 class="legal-title">Haftungsausschluss</h2>
 
       <div class="legal-row">
-        <div class="legal-label">
-          <span data-lang="en">Limitation of liability</span>
-          <span data-lang="de">Haftungsbeschränkung</span>
-          <span data-lang="id">Batasan tanggung jawab</span>
-        </div>
+        <div class="legal-label">Haftungsbeschränkung</div>
         <div class="legal-value" style="font-size: 0.95rem;">
-          <div data-lang="en">
-            <p><strong>Content:</strong> The contents of our pages were created with great care. However, we cannot guarantee the correctness, completeness, or topicality of the contents.</p>
-            <p style="margin-top: 0.5rem;"><strong>Links:</strong> Our website contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for these external contents.</p>
-          </div>
-          <div data-lang="de">
-            <p><strong>Inhalte:</strong> Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
-            <p style="margin-top: 0.5rem;"><strong>Links:</strong> Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.</p>
-          </div>
-          <div data-lang="id">
-            <p><strong>Konten:</strong> Konten di halaman kami dibuat dengan sangat hati-hati. Namun, kami tidak dapat menjamin kebenaran, kelengkapan, atau kemutakhiran konten tersebut.</p>
-            <p style="margin-top: 0.5rem;"><strong>Tautan:</strong> Situs web kami berisi tautan ke situs web pihak ketiga eksternal yang kontennya berada di luar pengaruh kami. Oleh karena itu, kami tidak dapat bertanggung jawab atas konten eksternal ini.</p>
-          </div>
+          <p><strong>Inhalte:</strong> Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</p>
+          <p style="margin-top: 0.5rem;"><strong>Links:</strong> Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.</p>
         </div>
       </div>
     </div>
@@ -353,27 +225,8 @@
 
 <!-- FOOTER -->
 <footer>
-  © 2026 Indo-Aachener Sportverein e.V. All rights reserved.
+  © 2026 Indo-Aachener Sportverein e.V. Alle Rechte vorbehalten.
 </footer>
 
-<script>
-  function setLang(lang, btn) {
-    document.body.setAttribute('data-active-lang', lang);
-    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    
-    // Store selected language in localStorage so it persists across pages
-    localStorage.setItem('selected_lang', lang);
-  }
-
-  // Retrieve and set language on load
-  window.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('selected_lang') || 'id';
-    const btn = Array.from(document.querySelectorAll('.lang-btn')).find(b => b.innerText.toLowerCase() === savedLang);
-    if (btn) {
-      setLang(savedLang, btn);
-    }
-  });
-</script>
 </body>
 </html>
