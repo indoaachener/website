@@ -799,7 +799,8 @@
       border-radius: 12px;
     }
 
-    .support-logo-img:hover {
+    .support-logo-img:hover,
+    .support-grid a.touch-active .support-logo-img {
       filter: grayscale(0%) opacity(100%);
       transform: scale(1.05);
     }
@@ -1513,6 +1514,51 @@
       modal.classList.remove('active');
       document.body.style.overflow = '';
     }
+
+    // Double-tap handler for touch screens on partner logos
+    let lastTouchStart = 0;
+    document.querySelectorAll('.support-grid a').forEach(link => {
+      let lastTapTime = 0;
+      let tapTimeout = null;
+
+      link.addEventListener('touchstart', function() {
+        lastTouchStart = Date.now();
+      }, { passive: true });
+
+      link.addEventListener('click', function(e) {
+        const isTouch = (Date.now() - lastTouchStart < 500) || e.pointerType === 'touch';
+        if (isTouch) {
+          const currentTime = Date.now();
+          const tapLength = currentTime - lastTapTime;
+
+          if (tapLength < 600 && tapLength > 0) {
+            // Second tap (double tap): allow navigation
+            clearTimeout(tapTimeout);
+            link.classList.remove('touch-active');
+            lastTapTime = 0;
+          } else {
+            // First tap: prevent navigation & activate hover visual
+            e.preventDefault();
+            lastTapTime = currentTime;
+
+            document.querySelectorAll('.support-grid a').forEach(l => l.classList.remove('touch-active'));
+            link.classList.add('touch-active');
+
+            clearTimeout(tapTimeout);
+            tapTimeout = setTimeout(() => {
+              link.classList.remove('touch-active');
+              lastTapTime = 0;
+            }, 2500);
+          }
+        }
+      });
+    });
+
+    document.addEventListener('touchstart', function(e) {
+      if (!e.target.closest('.support-grid a')) {
+        document.querySelectorAll('.support-grid a').forEach(l => l.classList.remove('touch-active'));
+      }
+    }, { passive: true });
   </script>
 </body>
 
