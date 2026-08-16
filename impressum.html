@@ -131,6 +131,19 @@
     border-top: 1px solid rgba(255, 255, 255, 0.15);
   }
 
+  .footer-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.25s;
+    font-size: 0.85rem;
+    letter-spacing: .05em;
+    display: inline-block;
+  }
+
+  .footer-link:hover {
+    color: var(--pink);
+  }
+
   @media (max-width: 768px) {
     .legal-card {
       padding: 1.75rem;
@@ -225,8 +238,11 @@
 
 <!-- FOOTER -->
 <footer>
+  <p style="margin-bottom: 0.75rem;">
+    <a href="mailto:admin@indoaachener.de" class="footer-link">admin@indoaachener.de</a>
+  </p>
   <p style="margin-bottom: 0.75rem;">Vereinsnummer: VR 6762, Amtsgericht Aachen</p>
-  © 2026 Indo-Aachener Sportverein e.V. Alle Rechte vorbehalten.
+  <p>© 2026 Indo-Aachener Sportverein e.V. Alle Rechte vorbehalten.</p>
 </footer>
 
 </body>
