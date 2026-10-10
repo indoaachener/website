@@ -753,6 +753,196 @@
       }
     }
 
+    /* ── HISTORY & MISSION ── */
+    .history {
+      background: var(--white);
+    }
+
+    .history-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .history-text p {
+      color: var(--mid);
+      margin-bottom: 1.2rem;
+      font-size: 1.02rem;
+    }
+
+    .history-side {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .timeline-card {
+      background: var(--cream);
+      border: 1px solid #dce4f0;
+      border-left: 3px solid var(--navy);
+      padding: 1.25rem;
+      border-radius: 4px;
+    }
+
+    .timeline-card .fact-value {
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-card p.timeline-desc {
+      font-size: 0.88rem;
+      color: var(--mid);
+      line-height: 1.5;
+    }
+
+    .mission-wrap {
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .mission-intro {
+      color: var(--mid);
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .logo-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .logo-card img {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(197, 69, 58, 0.25);
+    }
+
+    .logo-card p {
+      color: var(--mid);
+      font-size: 0.95rem;
+    }
+
+    /* ── SCHEDULE ── */
+    .schedule {
+      background: #EEF2F8;
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .sched-card {
+      background: var(--white);
+      border-radius: 6px;
+      padding: 1.75rem;
+      border-top: 3px solid var(--navy);
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .sched-head {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .sched-head img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .sched-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .sched-when {
+      font-size: 0.72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 500;
+    }
+
+    .sched-time {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    .sched-venue {
+      font-weight: 500;
+      color: var(--dark);
+      margin-top: 0.5rem;
+    }
+
+    .sched-addr {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .sched-contact {
+      margin-top: 1rem;
+      align-self: flex-start;
+      display: inline-flex;
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .sched-contact:hover {
+      background: var(--red);
+      transform: translateY(-2px);
+    }
+
+    .statutes-note {
+      text-align: center;
+      color: var(--mid);
+      font-size: 0.95rem;
+      margin-top: 3rem;
+      margin-bottom: -1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .history-grid,
+      .mission-wrap,
+      .schedule-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .mission-wrap {
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+      }
+
+      .schedule-grid {
+        gap: 1.5rem;
+      }
+    }
+
     /* ── SUPPORTED BY ── */
     .supported-by {
       background: var(--white);
@@ -955,7 +1145,7 @@
           <div class="divider"></div>
 
           <div data-lang="en">
-            <p>The Indo-Aachener Sportverein e.V. was founded to maximize the use of shared resources and strengthen
+            <p>The Indo-Aachener Sportverein e.V. was founded on the 31st of May 2026 in Aachen, Germany. Our mission is to maximize the use of shared resources and strengthen
               solidarity among all Indonesian communities in Aachen, Germany.</p>
             <p>Through sport, the club brings together Indonesians living and studying in Aachen, creating a home away
               from home built on teamwork, friendship, and shared culture.</p>
@@ -963,7 +1153,7 @@
               broader sporting competitions.</p>
           </div>
           <div data-lang="de">
-            <p>Der Indo-Aachener Sportverein e.V. wurde gegründet, um gemeinsame Ressourcen optimal zu nutzen und die
+            <p>Der Indo-Aachener Sportverein e.V. wurde am 31. Mai 2026 in Aachen gegründet. Unsere Mission ist es, gemeinsame Ressourcen optimal zu nutzen und die
               Solidarität unter allen indonesischen Gemeinschaften in Aachen zu stärken.</p>
             <p>Durch Sport vereint der Verein Indonesier, die in Aachen leben und studieren und schafft ein zweites
               Zuhause, das auf Teamgeist, Freundschaft und gemeinsamer Kultur beruht.</p>
@@ -971,7 +1161,7 @@
               sportlichen Wettkämpfen.</p>
           </div>
           <div data-lang="id">
-            <p>Indo-Aachener Sportverein e.V. didirikan untuk memaksimalkan penggunaan sumber daya bersama dan
+            <p>Indo-Aachener Sportverein e.V. didirikan pada 31 Mei 2026 di Aachen, Jerman. Misi kami adalah memaksimalkan penggunaan sumber daya bersama dan
               mempererat solidaritas di antara seluruh komunitas Indonesia di Aachen, Jerman.</p>
             <p>Melalui olahraga, klub ini menyatukan warga Indonesia yang tinggal dan belajar di Aachen. Menciptakan
               rumah kedua yang dibangun atas dasar kerja sama tim, persahabatan, dan kebudayaan bersama.</p>
@@ -1025,6 +1215,131 @@
               <span data-lang="de">Gemeinnützig · Sportförderung · Gemeinschaft</span>
               <span data-lang="id">Nirlaba · Promosi olahraga · Membangun komunitas</span>
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORY & MISSION -->
+  <section class="history">
+    <div class="container">
+      <span class="section-label">
+        <span data-lang="en">History</span>
+        <span data-lang="de">Geschichte</span>
+        <span data-lang="id">Sejarah</span>
+      </span>
+      <h2 class="section-title">
+        <span data-lang="en">How We Came Together</span>
+        <span data-lang="de">Wie wir zusammenfanden</span>
+        <span data-lang="id">Bagaimana Kami Bersatu</span>
+      </h2>
+      <div class="divider"></div>
+
+      <div class="history-grid">
+        <div class="history-text">
+          <div data-lang="en">
+            <p>The idea to found the Indo-Aachener Sportverein emerged within PPI Aachen (Perhimpunan Pelajar Indonesia Aachen), the community of Indonesian students in Aachen. Over the years, several sports groups had already formed in badminton, basketball, futsal, and volleyball that were active but operated independently, each without any legal framework.</p>
+            <p>Even before formal incorporation, this community had already begun organizing competitions on its own initiative. In 2025, the group held Liga Aachen twice, a small-scale futsal competition for local Indonesian teams. These events demonstrated both the appetite for organized competition within the community and the practical need for a proper legal structure to support and grow such initiatives further.</p>
+            <p>The founding members recognized that this lack of legal structure limited the departments' growth: without a registered structure, it was difficult to manage shared resources, officially use municipal sports facilities, apply for financial support or funding, or be recognized as an established institution. Out of this need came the decision to bring the various departments together under one common, legally recognized umbrella.</p>
+            <p>Turning this idea into reality took time. It followed long discussions among the various sports groups to align on a shared structure and way forward, and a lengthy preparation process covering everything from organizing the Gründungsversammlung (founding assembly) to drafting the Satzung (association statutes) itself. This careful groundwork ensured that all departments were heard and that the resulting structure would serve the community well.</p>
+            <p>This process culminated in the founding of the Indo-Aachener Sportverein e.V., with the statutes formally adopted by the General Assembly on the 31st of May 2026. The association was then officially registered with the Amtsgericht (local court) on the 31st of July 2026, granting it full legal status as an eingetragener Verein (e.V.). As a registered entity, the association now allows its individual departments to pool their strength, share responsibility, and, as a unified, non-profit organization, gain access to funding, insurance coverage, club facilities, and other benefits reserved for registered legal entities.</p>
+          </div>
+          <div data-lang="de">
+            <p>Die Idee zur Gründung des Indo-Aachener Sportvereins entstand innerhalb der PPI Aachen (Perhimpunan Pelajar Indonesia Aachen), der Gemeinschaft indonesischer Studierender in Aachen. Im Laufe der Jahre hatten sich bereits mehrere Sportgruppen in den Bereichen Badminton, Basketball, Futsal und Volleyball gebildet, die aktiv waren, aber unabhängig voneinander und ohne rechtlichen Rahmen arbeiteten.</p>
+            <p>Schon vor der formalen Gründung organisierte diese Gemeinschaft aus eigener Initiative Wettkämpfe. 2025 veranstaltete die Gruppe zweimal die Liga Aachen, ein kleines Futsal-Turnier für lokale indonesische Teams. Diese Veranstaltungen zeigten sowohl das Interesse der Gemeinschaft an organisiertem Wettkampf als auch den praktischen Bedarf an einer geeigneten Rechtsstruktur, um solche Initiativen weiter zu unterstützen und auszubauen.</p>
+            <p>Die Gründungsmitglieder erkannten, dass das Fehlen einer Rechtsstruktur das Wachstum der Abteilungen begrenzte: Ohne eingetragene Struktur war es schwierig, gemeinsame Ressourcen zu verwalten, städtische Sportstätten offiziell zu nutzen, finanzielle Unterstützung oder Fördermittel zu beantragen oder als etablierte Institution anerkannt zu werden. Aus diesem Bedarf entstand der Entschluss, die verschiedenen Abteilungen unter einem gemeinsamen, rechtlich anerkannten Dach zusammenzuführen.</p>
+            <p>Die Umsetzung dieser Idee brauchte Zeit. Es folgten lange Diskussionen zwischen den Sportgruppen, um sich auf eine gemeinsame Struktur und den weiteren Weg zu einigen, sowie ein aufwendiger Vorbereitungsprozess – von der Organisation der Gründungsversammlung bis zur Ausarbeitung der Satzung selbst. Diese sorgfältige Vorarbeit stellte sicher, dass alle Abteilungen gehört wurden und die entstehende Struktur der Gemeinschaft gut dienen würde.</p>
+            <p>Dieser Prozess mündete in der Gründung des Indo-Aachener Sportvereins e.V.; die Satzung wurde am 31. Mai 2026 von der Mitgliederversammlung förmlich beschlossen. Am 31. Juli 2026 wurde der Verein beim Amtsgericht eingetragen und erhielt damit den vollen Status eines eingetragenen Vereins (e.V.). Als eingetragene Körperschaft ermöglicht der Verein seinen Abteilungen nun, ihre Kräfte zu bündeln, Verantwortung zu teilen und als gemeinnützige, einheitliche Organisation Zugang zu Fördermitteln, Versicherungsschutz, Vereinsanlagen und weiteren Vorteilen zu erhalten, die eingetragenen juristischen Personen vorbehalten sind.</p>
+          </div>
+          <div data-lang="id">
+            <p>Gagasan untuk mendirikan Indo-Aachener Sportverein muncul dari PPI Aachen (Perhimpunan Pelajar Indonesia Aachen), komunitas pelajar Indonesia di Aachen. Selama bertahun-tahun, beberapa kelompok olahraga telah terbentuk di bidang bulu tangkis, basket, futsal, dan voli. Kelompok-kelompok ini aktif, tetapi berjalan sendiri-sendiri tanpa kerangka hukum.</p>
+            <p>Bahkan sebelum berbadan hukum, komunitas ini sudah mulai menyelenggarakan kompetisi atas inisiatif sendiri. Pada tahun 2025, kelompok ini menggelar Liga Aachen sebanyak dua kali, sebuah kompetisi futsal berskala kecil untuk tim-tim Indonesia lokal. Acara-acara ini menunjukkan antusiasme komunitas terhadap kompetisi yang terorganisasi, sekaligus kebutuhan praktis akan struktur hukum yang tepat untuk mendukung dan mengembangkan inisiatif semacam ini.</p>
+            <p>Para pendiri menyadari bahwa tidak adanya struktur hukum membatasi perkembangan divisi-divisi: tanpa struktur yang terdaftar, sulit untuk mengelola sumber daya bersama, menggunakan fasilitas olahraga kota secara resmi, mengajukan dukungan finansial atau pendanaan, maupun diakui sebagai lembaga yang mapan. Dari kebutuhan inilah lahir keputusan untuk menyatukan berbagai divisi di bawah satu payung bersama yang diakui secara hukum.</p>
+            <p>Mewujudkan gagasan ini membutuhkan waktu. Prosesnya diawali diskusi panjang antar kelompok olahraga untuk menyepakati struktur dan arah bersama, dilanjutkan persiapan yang panjang, mulai dari penyelenggaraan Gründungsversammlung (rapat pendirian) hingga penyusunan Satzung (AD/ART perkumpulan). Persiapan yang cermat ini memastikan seluruh divisi didengar dan struktur yang terbentuk dapat melayani komunitas dengan baik.</p>
+            <p>Proses ini berpuncak pada pendirian Indo-Aachener Sportverein e.V., dengan AD/ART yang secara resmi disahkan oleh Rapat Anggota pada 31 Mei 2026. Perkumpulan ini kemudian didaftarkan secara resmi ke Amtsgericht (pengadilan setempat) pada 31 Juli 2026, sehingga memperoleh status badan hukum penuh sebagai eingetragener Verein (e.V.). Sebagai badan terdaftar, perkumpulan kini memungkinkan setiap divisi menyatukan kekuatan, berbagi tanggung jawab, dan sebagai organisasi nirlaba yang bersatu, memperoleh akses ke pendanaan, perlindungan asuransi, fasilitas klub, serta manfaat lain yang diperuntukkan bagi badan hukum terdaftar.</p>
+          </div>
+        </div>
+
+        <div class="history-side">
+          <div class="timeline-card">
+            <p class="fact-value">2025</p>
+            <p class="timeline-desc">
+              <span data-lang="en">Liga Aachen held twice, a small-scale futsal competition for local Indonesian teams</span>
+              <span data-lang="de">Liga Aachen zweimal ausgetragen, ein kleines Futsal-Turnier für lokale indonesische Teams</span>
+              <span data-lang="id">Liga Aachen digelar dua kali, kompetisi futsal berskala kecil untuk tim Indonesia lokal</span>
+            </p>
+          </div>
+          <div class="timeline-card">
+            <p class="fact-value">31.05.2026</p>
+            <p class="timeline-desc">
+              <span data-lang="en">Statutes adopted by the General Assembly</span>
+              <span data-lang="de">Satzung von der Mitgliederversammlung beschlossen</span>
+              <span data-lang="id">AD/ART disahkan oleh Rapat Anggota</span>
+            </p>
+          </div>
+          <div class="timeline-card">
+            <p class="fact-value">31.07.2026</p>
+            <p class="timeline-desc">
+              <span data-lang="en">Registered at the Amtsgericht Aachen (VR 6762) as an eingetragener Verein</span>
+              <span data-lang="de">Eintragung beim Amtsgericht Aachen (VR 6762) als eingetragener Verein</span>
+              <span data-lang="id">Terdaftar di Amtsgericht Aachen (VR 6762) sebagai eingetragener Verein</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-wrap">
+        <div class="mem-card">
+          <h3 class="mem-card-title"><span class="dot"></span>
+            <span data-lang="en">Our Mission</span>
+            <span data-lang="de">Unsere Mission</span>
+            <span data-lang="id">Misi Kami</span>
+          </h3>
+          <p class="mission-intro">
+            <span data-lang="en">The Indo-Aachener Sportverein e.V. is dedicated to promoting sport and community among its members, and to building a sustainable, professionally organized home for the Indonesian sports community in Aachen. By uniting its departments under one legal framework, the association aims to:</span>
+            <span data-lang="de">Der Indo-Aachener Sportverein e.V. widmet sich der Förderung von Sport und Gemeinschaft unter seinen Mitgliedern und dem Aufbau eines nachhaltigen, professionell organisierten Zuhauses für die indonesische Sportgemeinschaft in Aachen. Indem er seine Abteilungen unter einem rechtlichen Rahmen vereint, verfolgt der Verein folgende Ziele:</span>
+            <span data-lang="id">Indo-Aachener Sportverein e.V. berdedikasi untuk memajukan olahraga dan kebersamaan di antara anggotanya, serta membangun rumah yang berkelanjutan dan terorganisasi secara profesional bagi komunitas olahraga Indonesia di Aachen. Dengan menyatukan divisi-divisinya di bawah satu kerangka hukum, perkumpulan ini bertujuan untuk:</span>
+          </p>
+          <ul>
+            <li>
+              <span data-lang="en">Ensure organized training and competition structures across all departments</span>
+              <span data-lang="de">Organisierte Trainings- und Wettkampfstrukturen in allen Abteilungen sicherstellen</span>
+              <span data-lang="id">Memastikan struktur latihan dan kompetisi yang terorganisasi di semua divisi</span>
+            </li>
+            <li>
+              <span data-lang="en">Enable shared access to sports facilities, financial resources, and institutional support</span>
+              <span data-lang="de">Gemeinsamen Zugang zu Sportstätten, finanziellen Mitteln und institutioneller Unterstützung ermöglichen</span>
+              <span data-lang="id">Memungkinkan akses bersama ke fasilitas olahraga, sumber daya keuangan, dan dukungan institusional</span>
+            </li>
+            <li>
+              <span data-lang="en">Strengthen the cohesion of the Indonesian community in Aachen</span>
+              <span data-lang="de">Den Zusammenhalt der indonesischen Gemeinschaft in Aachen stärken</span>
+              <span data-lang="id">Mempererat kebersamaan komunitas Indonesia di Aachen</span>
+            </li>
+            <li>
+              <span data-lang="en">Place the association's work on a stable, legally secure foundation for the long term</span>
+              <span data-lang="de">Die Arbeit des Vereins langfristig auf eine stabile, rechtssichere Grundlage stellen</span>
+              <span data-lang="id">Menempatkan kerja perkumpulan di atas landasan yang stabil dan aman secara hukum untuk jangka panjang</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mem-card logo-card">
+          <h3 class="mem-card-title"><span class="dot"></span>
+            <span data-lang="en">Our Logo</span>
+            <span data-lang="de">Unser Logo</span>
+            <span data-lang="id">Logo Kami</span>
+          </h3>
+          <img src="assets/ia.png" alt="Indo-Aachener Logo">
+          <div data-lang="en">
+            <p>Our logo has a blue background that symbolizes our stability and integrity, complemented by an image of the Aachen cathedral with the words "Aachener" surrounding it unbroken. This means that the bond of brotherhood between the Indonesian community in Aachen will never be broken.</p>
+          </div>
+          <div data-lang="de">
+            <p>Unser Logo hat einen blauen Hintergrund, der unsere Stabilität und Integrität symbolisiert, ergänzt durch eine Darstellung des Aachener Doms, umgeben vom ununterbrochenen Schriftzug „Aachener“. Das bedeutet, dass das Band der Brüderlichkeit zwischen der indonesischen Gemeinschaft in Aachen niemals zerbrechen wird.</p>
+          </div>
+          <div data-lang="id">
+            <p>Logo kami memiliki latar belakang biru yang melambangkan stabilitas dan integritas kami, dilengkapi gambar Katedral Aachen yang dikelilingi tulisan "Aachener" tanpa terputus. Ini bermakna bahwa ikatan persaudaraan komunitas Indonesia di Aachen tidak akan pernah terputus.</p>
           </div>
         </div>
       </div>
@@ -1090,6 +1405,102 @@
             <span data-lang="de">Volleyballabteilung</span>
             <span data-lang="id">Divisi Voli</span>
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="schedule">
+    <div class="container">
+      <span class="section-label">
+        <span data-lang="en">Schedules</span>
+        <span data-lang="de">Trainingszeiten</span>
+        <span data-lang="id">Jadwal</span>
+      </span>
+      <h2 class="section-title">
+        <span data-lang="en">Training Schedule</span>
+        <span data-lang="de">Trainingsplan</span>
+        <span data-lang="id">Jadwal Latihan</span>
+      </h2>
+      <div class="divider"></div>
+
+      <div class="schedule-grid">
+        <div class="sched-card">
+          <div class="sched-head">
+            <img src="assets/basket-ball.png" alt="Basketball Logo">
+            <h3 class="sched-name">Basketball</h3>
+          </div>
+          <p class="sched-when">
+            <span data-lang="en">Every Saturday</span>
+            <span data-lang="de">Jeden Samstag</span>
+            <span data-lang="id">Setiap Sabtu</span>
+          </p>
+          <p class="sched-time">10:00 – 12:00</p>
+          <p class="sched-venue">Suermondt-Park</p>
+          <p class="sched-addr">Aachen</p>
+          <a class="sched-contact" href="https://link.ppiaachen.de/basket-aachen" target="_blank" rel="noopener noreferrer">
+            <span data-lang="en">Contact</span>
+            <span data-lang="de">Kontakt</span>
+            <span data-lang="id">Kontak</span>
+          </a>
+        </div>
+        <div class="sched-card">
+          <div class="sched-head">
+            <img src="assets/badminton.png" alt="Badminton Logo">
+            <h3 class="sched-name">Badminton</h3>
+          </div>
+          <p class="sched-when">
+            <span data-lang="en">Every Wednesday</span>
+            <span data-lang="de">Jeden Mittwoch</span>
+            <span data-lang="id">Setiap Rabu</span>
+          </p>
+          <p class="sched-time">17:00 – 20:00</p>
+          <p class="sched-venue">Tivoli Sports</p>
+          <p class="sched-addr">Strangenhäuschen 11, 52070 Aachen</p>
+          <a class="sched-contact" href="https://link.ppiaachen.de/badmin-aachen" target="_blank" rel="noopener noreferrer">
+            <span data-lang="en">Contact</span>
+            <span data-lang="de">Kontakt</span>
+            <span data-lang="id">Kontak</span>
+          </a>
+        </div>
+        <div class="sched-card">
+          <div class="sched-head">
+            <img src="assets/football.png" alt="Futsal Logo">
+            <h3 class="sched-name">Futsal</h3>
+          </div>
+          <p class="sched-when">
+            <span data-lang="en">Every Sunday</span>
+            <span data-lang="de">Jeden Sonntag</span>
+            <span data-lang="id">Setiap Minggu</span>
+          </p>
+          <p class="sched-time">09:00 – 13:00</p>
+          <p class="sched-venue">Sportzentrum Kelmis</p>
+          <p class="sched-addr">Patronagestraße 53, 4720 Kelmis, Belgium</p>
+          <a class="sched-contact" href="https://link.ppiaachen.de/futsal-aachen" target="_blank" rel="noopener noreferrer">
+            <span data-lang="en">Contact</span>
+            <span data-lang="de">Kontakt</span>
+            <span data-lang="id">Kontak</span>
+          </a>
+        </div>
+        <div class="sched-card">
+          <div class="sched-head">
+            <img src="assets/volleyball.png" alt="Volleyball Logo">
+            <h3 class="sched-name">Volleyball</h3>
+          </div>
+          <p class="sched-when">
+            <span data-lang="en">Every Friday</span>
+            <span data-lang="de">Jeden Freitag</span>
+            <span data-lang="id">Setiap Jumat</span>
+          </p>
+          <p class="sched-time">20:00 – 22:00</p>
+          <p class="sched-venue">Citta Fit</p>
+          <p class="sched-addr">Sneeuwberglaan 11A, 6291 HB Vaals, Netherlands</p>
+          <a class="sched-contact" href="https://link.ppiaachen.de/voli-aachen" target="_blank" rel="noopener noreferrer">
+            <span data-lang="en">Contact</span>
+            <span data-lang="de">Kontakt</span>
+            <span data-lang="id">Kontak</span>
+          </a>
         </div>
       </div>
     </div>
@@ -1171,6 +1582,24 @@
           </ul>
         </div>
       </div>
+
+      <p class="statutes-note">
+        <span data-lang="en">Read the full organization statutes and fee regulations.</span>
+        <span data-lang="de">Lesen Sie die vollständige Satzung und Beitragsordnung.</span>
+        <span data-lang="id">Baca AD/ART organisasi dan ketentuan iuran selengkapnya.</span>
+      </p>
+      <div class="membership-actions">
+        <a class="action-btn" href="Satzung.pdf" onclick="openPdf('Satzung.pdf','Organization Statutes','Satzung','AD/ART Organisasi'); return false;">
+          <span data-lang="en">Statutes (Satzung)</span>
+          <span data-lang="de">Satzung</span>
+          <span data-lang="id">AD/ART (Satzung)</span>
+        </a>
+        <a class="action-btn" href="Beitragsordnung.pdf" onclick="openPdf('Beitragsordnung.pdf','Fee Regulations','Beitragsordnung','Ketentuan Iuran'); return false;">
+          <span data-lang="en">Fee Regulations (Beitragsordnung)</span>
+          <span data-lang="de">Beitragsordnung</span>
+          <span data-lang="id">Ketentuan Iuran (Beitragsordnung)</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1203,7 +1632,7 @@
             <span data-lang="de">Das oberste Organ des Vereins. Mindestens einmal jährlich. Beschlüsse mit einfacher
               Mehrheit; Satzungsänderungen mit zwei Dritteln.</span>
             <span data-lang="id">Lembaga tertinggi. Diadakan setidaknya setahun sekali. Keputusan dengan suara mayoritas
-              sederhana; perubahan statuta memerlukan dua pertiga suara.</span>
+              sederhana; perubahan AD/ART memerlukan dua pertiga suara.</span>
           </p>
         </div>
         <div class="gov-card">
@@ -1377,6 +1806,7 @@
           </div>
         </div>
       </div>
+    </div>
   </section>
 
   <!-- SUPPORTED BY -->
@@ -1448,6 +1878,16 @@
           <strong>Instagram</strong>
           <a href="https://www.instagram.com/indoaachener" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">@indoaachener</a>
         </div>
+        <div class="contact-item">
+          <strong>
+            <span data-lang="en">Community</span>
+            <span data-lang="de">Community</span>
+            <span data-lang="id">Komunitas</span>
+          </strong>
+          <a href="https://link.ppiaachen.de/wa-aachener" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">WhatsApp</a><br>
+          <a href="https://link.ppiaachen.de/dc-aachener" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Discord</a><br>
+          <a href="https://www.facebook.com/groups/ppiaachen" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Facebook</a>
+        </div>
       </div>
     </div>
   </section>
@@ -1472,7 +1912,7 @@
         @indoaachener
       </a>
     </p>
-    <p style="margin-bottom: 0.75rem;">Vereinsnummer: VR 6762, Amtsgericht Aachen</p>
+    <p style="margin-bottom: 0.75rem;">Registergericht: Amtsgericht Aachen &bull; Registernummer: VR 6762 &bull; Registerjahr: 2026</p>
     <p>© 2026 Indo-Aachener Sportverein e.V. All rights reserved.</p>
   </footer>
 
